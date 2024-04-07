@@ -49,7 +49,7 @@ def convert_df(df):
 data_path = st.file_uploader("上传excel文件")
 if data_path:
     google_sheet_df = pd.read_excel(data_path)
-    edited_df = st.experimental_data_editor(google_sheet_df.head(50))
+    edited_df = st.data_editor(google_sheet_df.head(50))
     progress_text = "Operation in progress. Please wait."
 
     # 这里不用管，主要逻辑在里面，一路运行就可以了；
